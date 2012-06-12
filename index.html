@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PS Hack 2012 webcam demo</title>
+<style type="text/css">
+
+body {
+    width: 640px;
+    margin: 16px auto 0 auto;
+    font-size: 0;
+}
+
+#video-wrapper {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+}
+
+#video-wrapper > .video-button {
+    position: absolute;
+    display: block;
+    width: 64px;
+    height: 64px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    font-size: 56px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: rgba(127,127,127,0.4);
+    border-radius: 50%;
+}
+#video-wrapper > .video-button.active {
+    background-color: rgba(192,64,64,0.6);
+}
+
+#video-wrapper > #video-button-1 {
+    top: 0;
+    left: 64px;
+    font-size: 40px;
+    line-height: 68px;
+}
+#video-wrapper > #video-button-2 {
+    top: 0;
+    right: 64px;
+    font-size: 48px;
+    line-height: 64px;
+}
+#video-wrapper > #video-button-3 {
+    top: 64px;
+    right: 0;
+    line-height: 54px;
+}
+#video-wrapper > #video-button-4 {
+    top: 64px;
+    left: 0;
+    line-height: 54px;
+}
+
+
+#video-wrapper > .swipe-marker {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 32px 24px;
+    border-color: transparent rgba(127,127,127,0.4);
+    border-radius: 50%;
+    top: 148px;
+}
+#video-wrapper > .swipe-marker.left {
+    border-left-width: 0;
+}
+#video-wrapper > .swipe-marker.right {
+    border-right-width: 0;
+}
+#video-wrapper > .swipe-marker.active {
+    border-color: transparent rgba(192,64,64,0.6);
+}
+
+#video-wrapper > #swipe-1 {left: 0px;}
+#video-wrapper > #swipe-2 {left: 32px;}
+#video-wrapper > #swipe-3 {left: 64px;}
+#video-wrapper > #swipe-4 {left: 96px;}
+#video-wrapper > #swipe-5 {left: 208px;}
+#video-wrapper > #swipe-6 {left: 240px;}
+#video-wrapper > #swipe-7 {left: 272px;}
+#video-wrapper > #swipe-8 {left: 304px;}
+
+#webcam {
+    -webkit-transform: rotateY(180deg);
+}
+
+#iframe-player {
+    border: 0;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div id="video-wrapper">
+<video id="webcam" width="320" height="240" autoplay></video>
+<span id="video-button-1" class="video-button">&#9654;</span>
+<span id="video-button-2" class="video-button">||</span>
+<span id="video-button-3" class="video-button">+</span>
+<span id="video-button-4" class="video-button">–</span>
+
+<span id="swipe-1" class="swipe-marker left"></span>
+<span id="swipe-2" class="swipe-marker left"></span>
+<span id="swipe-3" class="swipe-marker left"></span>
+<span id="swipe-4" class="swipe-marker left"></span>
+<span id="swipe-5" class="swipe-marker right"></span>
+<span id="swipe-6" class="swipe-marker right"></span>
+<span id="swipe-7" class="swipe-marker right"></span>
+<span id="swipe-8" class="swipe-marker right"></span>
+
+</div><canvas id="frame1" width="320" height="240"></canvas>
+
+<iframe id="iframe-player" src="embed_player.html" width="640" height="390"></iframe>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="http://www.ur.se/">
+    <title>Låtarna som förändrade musiken : Los Angeles - UR.se</title>
+    <link rel="stylesheet" type="text/css" href="/var/site_user/cache/public/stylesheets/73cdb27a3ce9c48cd299f1f30b654a2a_1337844182_all.css" />
+    <style type="text/css">html, body {width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; }</style>
+</head>
+<body>
+
+
+
+        <noscript>
+<div class="player-not-available">
+    <h3>Videospelaren kräver att JavaScript är aktiverat.</h3>
+    <p>Var god aktivera JavaScript i inställningarna för din webbläsare.</p>
+</div>
+</noscript>
+    <figure id="player-placeholder" style="background-image: url('http://assets.ur.se/id/166700/images/1_l.jpg');"></figure>
+
+<script type="text/javascript" src="/design/ur/javascript/jquery-1.6.2.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/design/ur/javascript/jwplayer-5.8.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/design/ur/javascript/urplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+urPlayer.config.controlbar = 'bottom';
+urPlayer.config.skin = 'http://www.ur.se' + urPlayer.config.skin;
+urPlayer.config.plugins = {
+    'http://www.ur.se/design/ur/javascript/jwplugins/gapro-2.js': urPlayer.gapro,
+    'http://www.ur.se/design/ur/javascript/jwplugins/captions-2.js': urPlayer.captions,
+    'http://www.ur.se/design/ur/javascript/jwplugins/timeslidertooltipplugin-2.js': {},
+    'http://www.ur.se/design/ur/javascript/jwplugins/clipsliderplugin.swf': {enabled: true}
+};
+urPlayer.config.modes[0].src = 'http://www.ur.se' + urPlayer.config.modes[0].src;
+
+urPlayer.init({    id: '166700',file: '/166000-166999/166700-8.mp4',file_mobile: '/166000-166999/166700-7.mp4',subtitle: 'http://undertexter.ur.se/166000-166999/166700-14.tt',start:    (m = location.hash.match(/[#&]start=(\d+)/)) ? m[1] : 0,duration: (m = location.hash.match(/[#&]stop=(\d+)/)) ? m[1] : undefined,width: '100%',height: '100%', autostart: true});
+</script>
+
+</body>
+</html>
